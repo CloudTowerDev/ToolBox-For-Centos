@@ -19,7 +19,7 @@ function main(){
     1. Kangle/Easypanel PHP版本安装（需先自行安装Kangle/Easypanel）
     2. 磁盘挂载助手（自定义挂载目录）
     3. BTPanel宝塔面板安装助手（一键安装宝塔面板）
-    0. 退出脚本 （再次打开此脚本请使用sh install命令）"
+    0. 退出脚本 （再次打开此脚本请使用sh toolbox.sh命令）"
     read -p "请输入执行序号并且回车： " number
     case "$number" in
     [1]) (install_php);;
