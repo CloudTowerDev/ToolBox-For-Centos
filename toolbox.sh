@@ -61,6 +61,7 @@ function auto_disk(){
     echo -e "正在下载挂载脚本"
     wget -O auto_disk.sh https://raw.githubusercontent.com/CloudTowerDev/ToolBox-For-Centos/main/tools/auto_disk.sh;sh auto_disk.sh
     rm -rf auto_disk.sh
+    sleep 5
     main
 }
 
@@ -70,6 +71,7 @@ function install_php_800(){
     echo -e "正在下载PHP800脚本"
     wget -O tpl_php800.sh https://raw.githubusercontent.com/CloudTowerDev/ToolBox-For-Centos/main/kangle/php/tpl_php800.sh;sh tpl_php800.sh
     rm -rf tpl_php800.sh
+    sleep 5
     install_php
 }
 
@@ -79,6 +81,7 @@ function install_php_748(){
     echo -e "正在下载PHP748脚本"
     wget -O tpl_php800.sh https://raw.githubusercontent.com/CloudTowerDev/ToolBox-For-Centos/main/kangle/php/tpl_php748.sh;sh tpl_php748.sh
     rm -rf tpl_php748.sh
+    sleep 5
     install_php
 }
 
@@ -88,6 +91,7 @@ function BTPanel(){
     echo -e "正在下载宝塔安装脚本"
     wget -O install.sh http://download.bt.cn/install/install_6.0.sh;sh install.sh
     rm -rf install.sh
+    sleep 5
     main
 }
 main
