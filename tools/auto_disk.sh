@@ -24,7 +24,7 @@ if [ "${winDisk}" != "" ];then
 fi
 
 read -p "请输入要挂载硬盘的目录名称：" setup_path
-if ["{$setup_path}" == "" ]; then
+if ["$setup_path" == "" ]; then
 	echo '请不要输入空白目录！'
 	exit;
 fi

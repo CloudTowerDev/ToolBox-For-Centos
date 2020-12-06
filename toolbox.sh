@@ -1,6 +1,6 @@
 function main(){
     clear
-    version = "cat /etc/redhat-release|sed -r 's/.* ([0-9]+)\..*/\1/'";
+    version=`cat /etc/redhat-release|sed -r 's/.* ([0-9]+)\..*/\1/'`
     if [ "${version}" != '7' ]; then
         echo '本脚本目前仅支持Centos-7版本使用，请使用Centos-7系统运行本脚本！'
         exit;
@@ -20,8 +20,8 @@ function main(){
     2. 磁盘挂载助手（自定义挂载目录）
     3. BTPanel宝塔面板安装助手（一键安装宝塔面板）
     0. 退出脚本 （再次打开此脚本请使用sh install命令）"
-    read -p "请输入执行序号并且回车" number
-    case number in
+    read -p "请输入执行序号并且回车： " number
+    case "$number" in
     [1]) (install_php);;
     [2]) (auto_disk);;
     [3]) (BTPanel);;
@@ -46,8 +46,8 @@ function install_php(){
     1. 一键安装PHP8.0.0（需先安装Kangle/Easypanel）
     2. 一键安装PHP7.4.8（需先安装Kangle/Easypanel）
     0. 返回"
-    read -p "请输入执行序号并且回车" number
-    case number in
+    read -p "请输入执行序号并且回车： " number
+    case "$number" in
     [1]) (install_php_800);;
     [2]) (install_php_748);;
     [0]) (main);;
@@ -90,3 +90,4 @@ function BTPanel(){
     rm -rf install.sh
     main
 }
+main
