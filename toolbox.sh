@@ -25,7 +25,7 @@ function main(){
     [1]) (install_php);;
     [2]) (auto_disk);;
     [3]) (BTPanel);;
-    [0]) ();;
+    [0]) ;;
     *) (main);;
     esac
 }
