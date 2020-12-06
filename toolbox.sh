@@ -1,7 +1,7 @@
 function main(){
     clear
     version = "cat /etc/redhat-release|sed -r 's/.* ([0-9]+)\..*/\1/'";
-    if [ "${version}" != '7' ] then
+    if [ "${version}" != '7' ]; then
         echo '本脚本目前仅支持Centos-7版本使用，请使用Centos-7系统运行本脚本！'
         exit;
     fi
