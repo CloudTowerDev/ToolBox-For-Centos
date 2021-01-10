@@ -43,12 +43,14 @@ function install_php(){
 
     *Kangle/Easypanel PHP版本安装*
     ===================================================================================
-    1. 一键安装PHP8.0.0（需先安装Kangle/Easypanel）
+    1. 一键安装PHP8.0.1（需先安装Kangle/Easypanel）
+    2. 一键安装PHP8.0.0（需先安装Kangle/Easypanel）
     2. 一键安装PHP7.4.8（需先安装Kangle/Easypanel）
     0. 返回"
     read -p "请输入执行序号并且回车： " number
     case "$number" in
-    [1]) (install_php_800);;
+    [1]) (install_php_801);;
+    [2]) (install_php_800);;
     [2]) (install_php_748);;
     [0]) (main);;
     *) (install_php);;
@@ -120,6 +122,16 @@ function auto_disk(){
     rm -rf auto_disk.sh
     sleep 5
     main
+}
+
+function install_php_801(){
+    clear
+    rm -rf tpl_php801.sh
+    echo -e "正在下载PHP800脚本"
+    wget -O tpl_php801.sh https://raw.githubusercontent.com/CloudTowerDev/ToolBox-For-Centos/main/kangle/php/tpl_php801.sh;sh tpl_php801.sh
+    rm -rf tpl_php801.sh
+    sleep 5
+    install_php
 }
 
 function install_php_800(){
